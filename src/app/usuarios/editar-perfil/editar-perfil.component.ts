@@ -21,6 +21,7 @@ export class EditarPerfilComponent implements OnInit {
     this.activatedRoute.params.subscribe({
       next: (params) => {
         this.id = params['id'];
+        this.usuarioService.setId(parseInt(this.id))
         this.usuarioService.obtenerPerfil(parseInt(this.id)).subscribe({
           next: (resPerfil:Perfil) => {
             this.perfil = resPerfil;

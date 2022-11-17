@@ -9,16 +9,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class ListadoPerfilComponent implements OnInit {
 
-  @Input() id: string = '';
-  actividades: string[];
+  @Input() actividades: string[];
   constructor(private usuarioService:UsuarioService) { }
 
   ngOnInit(): void {
-    this.usuarioService.obtenerPerfil(parseInt(this.id)).subscribe({
-      next: (resPerfil:Perfil) => {
-        this.actividades = resPerfil.actividades;
-      }
-    })
+    
   }
 
 }

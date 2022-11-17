@@ -10,4 +10,5 @@
 8. En Perfil.TS Modelo agregar ID y Actividades:string[]
 9. Agregar el nuevo componente de ListadoPerfil a Vista-Perfil.HTML
 10. En Listado-Perfil.HTML crear la tabla de Bootstrap que recorra las actividades
-11. En Listado=Perfil.TS recibir como Input() el ID para obtener el perfil y de alli tomar las actividades
+11. En Listado=Perfil.TS recibir como Input() las actividades
+12. En el caso de redirigir al Perfil editado o cancelar (seteo el ID al traerlo de PARAMS) crear en UsuarioService un setId() y un getId() donde haya un id=0 y desde Vista-Perfil.ts se valide para ver si trae uno random o no

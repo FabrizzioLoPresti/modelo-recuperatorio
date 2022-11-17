@@ -15,7 +15,11 @@ export class VistaPerfilComponent implements OnInit {
   constructor(private usuarioService: UsuarioService, private router:Router) { }
 
   ngOnInit(): void {
-    const id = Math.round(Math.random() * (15 - 1) + 1);
+    let id = this.usuarioService.getId();
+    
+    if(id === 0) {
+      id = Math.round(Math.random() * (15 - 1) + 1);
+    }
 
     this.usuarioService.obtenerPerfil(id).subscribe({
       next: (respuesta: Perfil) => {
