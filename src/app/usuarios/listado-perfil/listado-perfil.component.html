@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nro</th>
+        <th scope="col">Actividad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of actividades; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ a }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
